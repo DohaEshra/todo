@@ -14,6 +14,7 @@ router.route("/Todo")
     body("User").isNumeric().withMessage("User is Required")
 ], controller.UpdateTodo)
 router.delete("/Todo/:id",controller.DeleteTodo)
+.get("/Todo/", controller.getTodo)//func5
 router.get("/Todo/:user", controller.getTodos)
 
 module.exports=router;

@@ -63,3 +63,16 @@ module.exports.getTodos = (request, response, next)=>{
             next(error)
         })
 }
+//func5
+module.exports.getTodo = (request, response, next)=>{
+    console.log(request.query.id);
+    console.log(request.query.user);
+    TodoModel.find({_id:request.query.id, User:request.query.user})
+    .then(data=>{
+        console.log(data)
+        response.status(200).json({message:"Specific Todo for a Specific user", data})
+    })
+    .catch(error=>{
+            next(error)
+        })
+}
