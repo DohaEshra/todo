@@ -15,7 +15,10 @@ function TodoForm() {
             <section className='quiz_box '>
                     <div className='que_text'>
                         <AddTodo/>
-                        <input type={'search'} onChange={getSearch}/>
+                        <br/>
+                        <h4>Search by User Id:</h4>
+                        <input className="form-control" id="exampleInputTask" aria-describedby="emailHelp" type={'search'} onChange={getSearch}/>
+                        <br/>
                         <GetAll userID={search}/>
                     </div>
                 </section>
