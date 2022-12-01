@@ -4,9 +4,9 @@ import GetAll from './GetAll';
 import AddTodo from './AddTodo';
 
 
-function TodoForm() {
+function TodoForm() { 
     //useStates
-    const [search, SetSearch]= useState(0);
+    const [search, SetSearch]= useState('');
 
     function getSearch(event){
         SetSearch(event.target.value)
